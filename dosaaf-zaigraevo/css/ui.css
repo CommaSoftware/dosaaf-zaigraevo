@@ -1,43 +1,46 @@
 /* ----- Sections ----- */
-
-/* Стиль для списка */
-
-.list {
-	list-style-type: none;
-	padding-inline-start: unset;
+.section {
+	scroll-snap-align: start;
 }
 
-.item {
-	position: relative;
-	padding-left: 16px;
-	margin-bottom: 16px;
-	font-size: var(--font-size-additional);
-	font-weight: var(--font-weight-light-additional);
-}
-
-.item:before {
-	content: '';
-	width: 6px;
-	height: 6px;
-	transform: rotate(45deg) translate(-50%, -50%);
-	background-color: var(--color-red);
-	display: block;
-	position: absolute;
-	left: 3px;
-	top: 50%;
-}
-
-/* ------------------------------------- */
+/* ----- Containers ----- */
 
 .dark-background {
+	padding: 52px 0;
+	position: relative;
 	background-color: var(--dark-background);
 	color: var(--color-white-additional);
 }
 
+.dark-background::before {
+	content: url("data:image/svg+xml, <svg viewBox='0 0 1552 46' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1552 45.135C1552 45.135 1131 -2.86499 776 0.13501C421 3.13501 0 45.135 0 45.135V0.13501L1552 0.13501V45.135Z' fill='%23ffffff'/></svg>");
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: -16px;
+	right: -16px;
+}
+
+.dark-background::after {
+	content: url("data:image/svg+xml, <svg viewBox='0 0 1552 46' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 45.135C0 45.135 384 0.13501 776 0.13501C1168 0.13501 1552 45.135 1552 45.135H0Z' fill='%23FFFFFF'/></svg>");
+	display: block;
+	position: absolute;
+	bottom: -6px;
+	left: -16px;
+	right: -16px;
+}
+
 .dark-background .container-title {
 	color: var(--dark-background);
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: var(--color-white-additional);
+	text-shadow:
+	-1px -1px 0 var(--color-white),
+	0    -1px 0 var(--color-white),
+	1px  -1px 0 var(--color-white),
+	1px   0   0 var(--color-white),
+	1px   1px 0 var(--color-white),
+	0     1px 0 var(--color-white),
+	-1px  1px 0 var(--color-white),
+	-1px  0   0 var(--color-white);
 }
 
 .dark-background a {
@@ -48,8 +51,15 @@
 .light-background .container-title {
 	color: var(--color-white);
 	background-color: var(--light-background);
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: var(--dark-background);
+	text-shadow:
+	-1px -1px 0 var(--color-map),
+	0    -1px 0 var(--color-map),
+	1px  -1px 0 var(--color-map),
+	1px   0   0 var(--color-map),
+	1px   1px 0 var(--color-map),
+	0     1px 0 var(--color-map),
+	-1px  1px 0 var(--color-map),
+	-1px  0   0 var(--color-map);
 }
 
 .container-title { 

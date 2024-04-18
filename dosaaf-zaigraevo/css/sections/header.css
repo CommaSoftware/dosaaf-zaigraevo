@@ -1,13 +1,18 @@
-header {
+.header {
 	position: fixed;
 	top: 0;
 	z-index: 100;
 	width: 100%;
 	padding: 0;
 	background-color: var(--color-white);
+	transition: 250ms;
 }
 
-header .header__container {
+.header.is--hiding {
+	transform: translateY(-100%);
+}
+
+.header .header__container {
 	max-width: var(--width-container);
 	margin: 0 auto;
 	padding: var(--space-5x) var(--space-3x);
