@@ -1,0 +1,41 @@
+.nav-footer {
+    display: flex;
+    gap: var(--space-4x);
+    justify-content: center;
+    margin-bottom: var(--space-32x);
+}
+
+.advertisement-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+footer .container {
+    padding: 120px 0 0 0;
+}
+
+.nav-footer__link:hover {
+    color: var(--color-red);
+}
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        padding: var(--space-12x) var(--space-3x) 0 var(--space-3x);
+    }
+
+    .nav-footer {
+        display: none;
+    }
+
+    .advertisement-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advertisement-banner p {
+        font-size: 12px;
+        font-weight: var(--font-weight-light-additional);
+    }
+}
