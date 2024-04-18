@@ -6,7 +6,11 @@ footer .container {
 	display: flex;
 	gap: var(--space-4x);
 	justify-content: center;
-	margin-bottom: var(--space-32x);
+	margin-bottom: var(--space-16x);
+}
+
+footer .contact-info__data-field {
+	font-size: 15px;
 }
 
 .advertisement-banner {
@@ -18,6 +22,18 @@ footer .container {
 
 .nav-footer__link:hover {
 	color: var(--color-red);
+}
+
+.advertisement-banner {
+	color: var(--color-gray);
+	font-size: 15px;
+	font-weight: var(--font-weight-light-additional);
+	border-top: 1px solid var(--color-gray);
+}
+
+.advertisement-banner a {
+	color: var(--color-gray);
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
@@ -40,8 +56,7 @@ footer .container {
 		align-items: center;
 	}
 
-	.advertisement-banner p {
+	.advertisement-banner {
 		font-size: 12px;
-		font-weight: var(--font-weight-light-additional);
 	}
 }

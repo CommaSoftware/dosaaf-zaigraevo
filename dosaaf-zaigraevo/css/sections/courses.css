@@ -52,9 +52,10 @@
 	opacity: 0.1;
 }
 
-.courses__title {
+.courses .container-title {
 	color: var(--color-white);
-	font-size: 72px;
+	text-shadow: none;
+	/* font-size: 72px; */
 	font-weight: 800;
 	text-transform: uppercase;
 }
@@ -128,5 +129,11 @@
 	.courses__btns {
 		flex-direction: column;
 		gap: var(--space-2x)
+	}
+
+	.courses__btns .btn {
+		box-sizing: border-box;
+		width: 100%;
+		text-align: center;
 	}
 }

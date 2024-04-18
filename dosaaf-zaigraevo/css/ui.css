@@ -87,6 +87,8 @@
 .btn {
 	display: inline-block;
 	text-decoration: none;
+	color: var(--color-black);
+	background-color: var(--color-white-additional);
 	padding: var(--space-4x) var(--space-10x);
 	border-radius: 5px;
 	font-weight: var(--font-weight-additional);
