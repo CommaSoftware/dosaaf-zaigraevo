@@ -58,36 +58,6 @@
 	gap: var(--space-4x);
 }
 
-.contact-info__data-field {
-	color: var(--color-black);
-	font-size: 20px;
-	margin: 0 5px;
-}
-
-.contact-info__data-field.has--icon {
-	display: inline-flex;
-	align-items: center;
-}
-
-.contact--email::before {
-	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'><path fill='%231E2125' d='M12,0C5.4,0,0,5.4,0,12c0,6.6,5.4,12,12,12s12-5.4,12-12C24,5.4,18.6,0,12,0z M7.5,7.5h9c0.7,0,1.3,0.5,1.5,1.2l-6,3.7L6,8.7C6.2,8,6.8,7.5,7.5,7.5z M6,9.5l4.4,2.7L6,14.9V9.5z M16.5,16.5h-9c-0.6,0-1.1-0.3-1.4-0.9l4.9-3l0.9,0.6l0.9-0.6l4.9,3C17.6,16.2,17.1,16.5,16.5,16.5z M18,14.9l-4.4-2.7L18,9.5V14.9z'/></svg>");
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	margin-right: var(--space-2x);
-}
-.contact--phone::before{
-	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'><path fill='%231E2125' d='M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12s12-5.4,12-12S18.6,0,12,0z M17.7,16.4L17,17.1c-0.6,0.5-1.4,0.8-2.1,0.5c-1.9-0.7-3.6-1.8-5-3.2c-1.5-1.4-2.5-3.1-3.2-5c-0.3-0.7-0.1-1.5,0.5-2l0.7-0.7c0.5-0.5,1.3-0.5,1.8,0l0.1,0.1l1.3,1.5c0.2,0.3,0.3,0.7,0.2,1.1L10.9,11c-0.1,0.2,0,0.4,0.1,0.5l1.8,1.8c0.2,0.1,0.3,0.1,0.5,0.1l1.6-0.4c0.4-0.1,0.8,0,1.1,0.2l1.6,1.3C18.2,15,18.2,15.9,17.7,16.4z'/></svg>");
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	margin-right: var(--space-2x);
-}
-
-.contact-info__data-field b {
-	font-weight: 500;
-}
-
 .nav__menu--hidden {
 	position: absolute;
 	left: 0;
@@ -154,13 +124,6 @@
 
 .nav__btn.is--opened::after {
 	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'><path d='M2.9,20L20.5,2.3L22,3.7L4.3,21.4L2.9,20z M3.9,2.5l17.7,17.7l-1.4,1.4L2.5,3.9L3.9,2.5z'/></svg>");
-}
-
-/*  */
-.contact-info__item--img {
-	display: grid;
-	grid-template-columns: auto auto;
-	align-items: center;
 }
 
 /*  */

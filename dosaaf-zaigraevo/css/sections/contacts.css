@@ -1,8 +1,12 @@
+.container#contact-section {
+	padding-bottom: 120px;
+}
+
 .contact-info {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin-bottom: calc(var(--space-16x) - 4px);
-	grid-column-gap: var(--space-4x);
+	gap: var(--space-4x);
 }
 
 .contact-form {
@@ -45,6 +49,11 @@
 }
 
 @media screen and (max-width: 600px) {
+	.container#contact-section {
+		padding-top: 32px;
+		padding-bottom: 64px;
+	}	
+
 	.contact-info {
 		grid-template-columns: 1fr;
 		margin-bottom: 32px;
