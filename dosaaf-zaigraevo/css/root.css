@@ -43,10 +43,20 @@
 	--light-background: #FFFFFF;
 	--border-gray: 1px solid #BCBCBC;
 
+	--text-shadow-white: 
+		-1px -1px 0 var(--color-white),
+		0    -1px 0 var(--color-white),
+		1px  -1px 0 var(--color-white),
+		1px   0   0 var(--color-white),
+		1px   1px 0 var(--color-white),
+		0     1px 0 var(--color-white),
+		-1px  1px 0 var(--color-white),
+		-1px  0   0 var(--color-white);
+
 
 	/* Отступы и размеры элементов */
 	--width-container: 1088px;
-	--header-height: 100px;
+	--header-height: 88px;
 	--main-padding: 32px 16px;
 }
 

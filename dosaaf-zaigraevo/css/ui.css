@@ -16,8 +16,8 @@
 	display: block;
 	position: absolute;
 	top: -1px;
-	left: -16px;
-	right: -16px;
+	left: -25%;
+	right: -25%;
 }
 
 .dark-background.is--bottom-round::after {
@@ -216,6 +216,14 @@ input {
 
 	.container-subtitle {
 		font-size: 20px;
+	}
+
+	.contact-info__data-field {
+		font-size: 15px;
+	}
+
+	.btn {
+		font-size: 15px;
 	}
 
 	button {

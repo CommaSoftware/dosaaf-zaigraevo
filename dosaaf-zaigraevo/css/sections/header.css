@@ -6,6 +6,7 @@
 	padding: 0;
 	background-color: var(--color-white);
 	transition: 250ms;
+	transition-delay: 0.2s;
 }
 
 .header.is--hiding {
@@ -15,7 +16,7 @@
 .header .header__container {
 	max-width: var(--width-container);
 	margin: 0 auto;
-	padding: var(--space-5x) var(--space-3x);
+	padding: var(--space-3x);
 }
 
 .dosaaf__logo {
@@ -26,7 +27,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin:  0;
+	margin: 0;
 }
 
 .nav-info {
@@ -70,7 +71,7 @@
 	z-index: -1;
 	height: calc(100dvh - var(--header-height));
 	overflow-y: auto;
-	background-color: var(--color-white);
+	background: linear-gradient(to bottom, #FFF, #FFFE);
 	transition: 300ms ease-in-out;
 }
 

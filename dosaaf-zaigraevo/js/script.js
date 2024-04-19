@@ -1,9 +1,21 @@
 // Navigation opening & Header floating
 const navBtn = document.querySelector('.nav__btn');
 const header = document.querySelector('.header');
+
 if (!!navBtn) navBtn.addEventListener('click', ()=>{
 	navBtn.classList.toggle("is--opened");
 	document.querySelector('.nav__menu--hidden').classList.toggle('is--opened');
+
+	const navLinks = document.querySelectorAll('.nav__menu--hidden a');
+	for (let navLink of navLinks) {
+		navLink.addEventListener('click', ()=> {
+			if (navBtn.classList.contains('is--opened')) {
+				navBtn.classList.toggle("is--opened");
+				document.querySelector('.nav__menu--hidden').classList.toggle('is--opened');
+				header.classList.remove('is--hiding')
+			};
+		})
+	}
 })
 
 if (!!header && !!navBtn) {
