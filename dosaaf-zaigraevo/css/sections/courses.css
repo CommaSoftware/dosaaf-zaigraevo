@@ -1,50 +1,54 @@
 #courses-section {
 	position: relative;
-	z-index: -1;
-	min-height: calc(100dvh + 104px);
+	z-index: 11;
 	overflow: hidden;
+}
+
+#courses-section .secrion__scroll-wrapper {
+	width: calc(100% + 35px);
+	height: calc(100dvh);
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+#courses-section .courses {
+	height: calc(100dvh);
 	scroll-snap-align: start;
+	pointer-events: none;
+	/* background-position: center;
+	background-size: cover;
+	background-color: var(--dark-background);
+	backdrop-filter: grayscale(100%); */
 }
 
 #courses-section .container {
-	position: relative;
 	flex-direction: column;
 	padding-top: 128px;
 	padding-bottom: 128px;
-	min-height: calc(100dvh + 104px);
+	min-height: calc(100dvh);
 }
 
-.courses-wrapper {
-	position: relative;
-	height: calc(100dvh - 300px);
-}
-
-.courses {
+.courses__article { /* По умолчанию, следующий */
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	z-index: 1;
+	transform: translateY(10%) translateX(300%) rotate(17.5deg);
 	display: flex;
-	width: 100%;
+	width: var(--width-container);
 	flex-direction: column;
 	justify-content: space-between;
-	transition: 300ms;
+	transition: 450ms ease-out;
 }
 
-.courses.is--previous {
-	transform: translateY(-25%) translateX(-200%) rotate(-10deg);
+.courses.is--active .courses__article { /* Активный */
+	transform: translateY(-50%);
 }
 
-.courses.is--next {
-	transform: translateY(-25%) translateX(200%) rotate(10deg);
+.courses.is--prev .courses__article { /* Предыдущий */
+	transform: translateY(10%) translateX(-300%) rotate(-17.5deg);
 }
 
 .courses__bg {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	z-index: -1;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -52,7 +56,7 @@
 	opacity: 0.1;
 }
 
-.courses .container-title {
+.courses__article .container-title {
 	color: var(--color-white);
 	text-shadow: none;
 	/* font-size: 72px; */
@@ -91,6 +95,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-4x);
+	pointer-events: all;
 }
 
 .courses__mouse-icon {
@@ -115,7 +120,7 @@
 }
 
 @media screen and (max-width: 768px) {
-	.courses {
+	.courses__article {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
