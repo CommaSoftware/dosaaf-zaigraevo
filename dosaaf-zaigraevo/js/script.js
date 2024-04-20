@@ -33,27 +33,40 @@ if (!!header && !!navBtn) {
 const coursesWrap = document.querySelector('#courses-section .secrion__scroll-wrapper');
 const coursesArr = document.querySelectorAll('#courses-section .courses')
 if (!!coursesWrap && !!coursesArr.length) {
-	let lastScrollTop = 0;
-	coursesWrap.addEventListener('scroll', ()=> {
-		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		for (let i=0; i<coursesArr.length; i++) {
-			if (coursesWrap.getBoundingClientRect().y == coursesArr[i].getBoundingClientRect().y ) {
-				let scrollTop = coursesArr[0].getBoundingClientRect().y;
-				if (scrollTop > lastScrollTop) { // Scroll-up
-					if(i!==0) coursesArr[i-1].classList.add('is--active')
+	let prevWrap = coursesWrap.closest('#courses-section').previousElementSibling;
+	let nextWrap = coursesWrap.closest('#courses-section').nextElementSibling;
 
-					coursesArr[i].classList.add('is--active')
-					coursesArr[i].classList.remove('is--prev')
+	let wheelEvents = ['mousewheel', 'wheel'];
 
-					if(i!==coursesArr.length-1) coursesArr[i+1].classList.remove('is--active')
-				} else { // Scroll-down
-					if(i!==0) coursesArr[i-1].classList.remove('is--active')
-					if(i!==0) coursesArr[i-1].classList.add('is--prev')
-
-					coursesArr[i].classList.add('is--active')
+	for(wheelEvent of wheelEvents) {
+		prevWrap.addEventListener(wheelEvent, (e)=> { if (e.deltaY > 0) coursesWrap.scrollIntoView({ behavior: 'smooth' }) });
+		nextWrap.addEventListener(wheelEvent, (e)=> { if (e.deltaY < 0) coursesWrap.scrollIntoView({ behavior: 'smooth' }) });
+		coursesWrap.addEventListener(wheelEvent, (e)=> {
+			e.preventDefault()
+			let current = document.querySelector('#courses-section .courses.is--active');
+			for (let i=0; i<coursesArr.length; i++) {
+				if (current == coursesArr[i]) {
+					if (e.deltaY > 0) { // Scroll-up
+						if(!!coursesArr[i+1]) {
+							coursesArr[i].classList.remove('is--active')
+							coursesArr[i].classList.add('is--prev')
+	
+							coursesArr[i+1].classList.add('is--active')
+						} else {
+							nextWrap.scrollIntoView({ behavior: 'smooth' })
+						}
+					} else { // Scroll-down
+						if(!!coursesArr[i-1]) {
+							coursesArr[i-1].classList.add('is--active')
+							coursesArr[i-1].classList.remove('is--prev')
+	
+							coursesArr[i].classList.remove('is--active')
+						} else {
+							prevWrap.scrollIntoView({ behavior: 'smooth' })
+						}
+					}
 				}
-				lastScrollTop = scrollTop
-			}
 		}
-	});
+		});
+	}
 }
