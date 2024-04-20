@@ -8,11 +8,7 @@
 }
 
 body {
-	height: 100dvh;
 	padding-top: var(--header-height);
 	overflow-x: hidden;
-	overflow-y: scroll;
 	position: relative;
-	/* z-index: -1; */
-	scroll-snap-type: y mandatory;
 }

@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 768px) {
 	:root {
-		--header-height: 92px;
+		--header-height: 76px;
 	}
 }
 

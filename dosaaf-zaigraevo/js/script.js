@@ -52,6 +52,8 @@ if (!!coursesWrap && !!coursesArr.length) {
 							coursesArr[i].classList.add('is--prev')
 	
 							coursesArr[i+1].classList.add('is--active')
+
+							coursesWrap.scrollIntoView({ behavior: 'smooth' })
 						} else {
 							nextWrap.scrollIntoView({ behavior: 'smooth' })
 						}
@@ -61,6 +63,8 @@ if (!!coursesWrap && !!coursesArr.length) {
 							coursesArr[i-1].classList.remove('is--prev')
 	
 							coursesArr[i].classList.remove('is--active')
+
+							coursesWrap.scrollIntoView({ behavior: 'smooth' })
 						} else {
 							prevWrap.scrollIntoView({ behavior: 'smooth' })
 						}
