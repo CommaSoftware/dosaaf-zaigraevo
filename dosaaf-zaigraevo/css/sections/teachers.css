@@ -1,15 +1,19 @@
 .teachers {
-	margin-top: 50px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 16px;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	padding-top: 50px;
+	padding-bottom: 16px;
+	display: flex;
+	gap: 16px;
 }
 
 .teachers__card {
+	min-width: calc(50% - 8px);
 	position: relative;
 	border: var(--border-gray);
 	border-radius: 10px;
 	padding: 75px 16px;
+	scroll-snap-align: start;
 }
 
 .teachers__card__photo {
@@ -75,16 +79,13 @@
 
 @media screen and (max-width: 768px) {
 	.teachers {
-		display: grid;
-		grid-template-columns: 1fr;
+		margin-right: -16px;
+		padding-right: 16px;
 	}
 
 	.teachers__card {
+		min-width: calc(100% - 25px);
 		padding: 75px 12px;
-	}
-
-	.teachers__card:nth-child(2) {
-		display: none;
 	}
 
 	.teachers__btn {
