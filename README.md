@@ -1,40 +1,6 @@
-# Сайт ДОСААФ Заиграевского района
-Сайт ПОУ Заиграевского РСТК РО ДОСААФ России РБ. Основан на [досаафзаиграево.рф](http://xn--80aaaakednol5djwh1c.xn--p1ai/)
+# "ДОСААФ Заиграевского района" Website
+Сайт ПОУ Заиграевского РСТК РО ДОСААФ России РБ. Основан на [досаафзаиграево.рф](http://xn--80aaaakednol5djwh1c.xn--p1ai/).
 
-## Техническое задание
-Необходимо сверстать сайт, основываясь на [дизайне в Figma](https://www.figma.com/file/jFDSSzfIeDYhKtKaYuYNAl/Untitled?type=design&node-id=9%3A96&mode=design&t=eM42kUpaAixDTWhd-1)
+- [Макет в Figma](https://www.figma.com/file/jFDSSzfIeDYhKtKaYuYNAl/Untitled?type=design&node-id=9%3A96&mode=design&t=eM42kUpaAixDTWhd-1)
 
-## Code rools
-### Общие требования:
-1. Использовать только технологии, поддерживаемые следующими браузерами: Edge v13+, Firefox v52+, Chrome v57+, Safari v10.1+, Opera v40+. Проверять свойства на поддержку можно на сервисе [caniuse.com](https://caniuse.com/)
-2. Не использовать HTML атрибуты взаимодействия с JS (такие как onclick, onmuseover и др.)
-3. Запрещается подключение иконок svg из файла (ПРИЧИНА: невозможность изменения цвета через CSS свойства)
-
-### Требования к HTML:
-1. Использовать табуляцию в 4 пробела и соблюдать визуальную вложенность элементов
-2. Оптимизировать изображения, загружая на станице версию в x1.5 больше, чем блок, в котором это изображение лежит
-3. Добавлять к изображенияю атрибут loading="lazy"
-
-### Требования к CSS:
-1. Нейминг по методологии БЭМ
-2. Не ниспользовать препроцессоры и фреймворки (вроде Bootstrap)
-3. Использовать CSS-variables для размеров шрифтов и цветов (записывать их в root.css)
-4. Использовать компоненты в виде CSS-классов для простейших UI элементов (кнопок, форм ввода, заголовков и т.п), прописать их в отдельном файле (ui.css)
-5. Для каждого блока создавать отдельный файл CSS
-6. Верстать по 4-х пиксельной сетке (размеры элементов кратны 4-м пикселям)
-7. Верстать по 6-котоночной системе (можно задать разметку колонок в CSS-variables):
-
-```
-    --content-area-width: 1070px; /* Размер контентной области */
-    --content-area-padding: var(--space-4x); /* Отступ контентной области от краёв экрана */
-    --column-count: 6; /* Число колонок */
-    --space-column-gap: var(--space-4x); /* Отступ между колонками */
-    --space-column-plus-gap: calc((var(--content-area-width) + var(--space-column-gap)) / var(--column-count));
-    --space-column: calc(var(--space-column-plus-gap) - var(--space-column-gap));
-    --space-column-2: calc((var(--space-column-plus-gap))* 2 - var(--space-column-gap));
-    --space-column-3: calc((var(--space-column-plus-gap))* 3 - var(--space-column-gap));
-    --space-column-4: calc((var(--space-column-plus-gap))* 4 - var(--space-column-gap));
-```
-
-## ТРЕБОВАНИЯ К JS:
-1. Названия переменных должны начинаться со строчной буквы. Если название переменной состоит из нескольких слов, писать их слитно и каждое новое слово начинать с заглавной буквы (ПРИМЕР: "timeLastMessagesObj")
+![Screenshot 2024-04-21 at 15-11-01 Автошкола ДОСААФ Заиграево](https://github.com/CommaSoftware/dosaaf-zaigraevo/assets/112548523/6bd4bdc7-5000-4af7-8d0d-19213ccfc642)
