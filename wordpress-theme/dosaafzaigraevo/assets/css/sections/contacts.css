@@ -1,0 +1,252 @@
+.container#contacts {
+	padding-top: 64px;
+	padding-bottom: 120px;
+}
+
+.contact-info {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-bottom: calc(var(--space-16x) - 4px);
+	gap: var(--space-4x);
+}
+
+.contact-form:not(.is__only-map) {
+	display: grid;
+	grid-template-areas: 'title title title'
+						 'form map map';
+	grid-row-gap: var(--space-4x);
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: var(--space-4x);
+}
+
+.contact-form__title {
+	grid-area: title;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+
+/* ----- Specific for "Contact form 7" WP plug-in ----- */
+.contact-form form {
+	grid-area: form !important;
+	display: grid !important;
+	grid-row-gap: var(--space-4x) !important;
+}
+
+.contact-form form p {
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+}
+
+.contact-form form input {
+	padding: var(--space-4x) var(--space-10x) var(--space-4x) var(--space-4x) !important;
+	box-sizing: border-box !important;
+	border: 1px solid rgb(188, 188, 188) !important;
+	background-color: var(--color-white) !important;
+	border-radius: calc(var(--space) + 1px) !important;
+	width: 100% !important;
+	font-size: var(--font-size-additional) !important;
+}
+
+.contact-form form button[type="submit"],
+.contact-form form input[type="submit"] {
+	position: relative !important;
+	display: inline-block !important;
+	width: min-content !important;
+	align-self: flex-end !important;
+	text-decoration: none;
+	color: var(--color-white) !important;
+	background-color: var(--color-red) !important;
+	padding: var(--space-4x) var(--space-10x) !important;
+	border-radius: 5px !important;
+	font-weight: var(--font-weight-additional) !important;
+	border-color: transparent !important;
+	font-size: var(--font-size-main) !important;
+	transition: 300ms !important;
+	cursor: pointer !important;
+	overflow: hidden !important;
+}
+
+.contact-form form button[type="submit"]:not(:hover, :active)::after,
+.contact-form form input[type="submit"]:not(:hover, :active)::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -100px;
+	top: -20px;
+	bottom: -20px;
+	width: 64px;
+	background: linear-gradient(to right, #fff0, #fe9d9d85);
+	transform: rotate(25deg);
+	filter: blur(5px);
+	animation: btnblick 4500ms infinite ease-out 1s;
+}
+
+.contact-form form textarea {
+	width: 100% !important;
+	height: 125px;
+	background-color: var(--color-white) !important;
+	border: 1px solid rgb(188, 188, 188) !important;
+	border-radius: calc(var(--space) + 1px) !important;
+	padding: var(--space-4x) var(--space-10x) var(--space-4x) var(--space-4x) !important;
+	resize: vertical !important;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+	font-size: 15px !important;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+	outline: 1px solid var(--color-map) !important;
+	border: 1px solid var(--color-map) !important;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+	outline: 1px solid var(--color-map) !important;
+	border: 1px solid var(--color-map) !important;
+}
+
+
+.contact-form form input[type="submit"]:focus {
+	outline: 1px solid var(--color-red);
+	border: 1px solid var(--color-red);
+}
+
+.contact-form form:not(.submitting) .wpcf7-spinner {
+	display: none;
+}
+
+.contact-form form .wpcf7-response-output {
+	padding: 16px;
+	margin: 0;
+	border-radius: 5px;
+}
+
+.contact-form form.invalid .wpcf7-response-output {
+	border: 1px solid #ffb900;
+	background-color: #fff6de;
+	padding: 16px;
+	margin: 0;
+	border-radius: 5px;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border: 1px solid #46b450;
+	padding: 16px;
+	margin: 0;
+	border-radius: 5px;
+	background: #dfffe2;
+}
+
+/* For FormCraft Plug-in */
+.contact-form .fcb_form {
+	width: 100% !important;
+	padding: 0 !important;
+	background: transparent !important;
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-radius: 10px !important;
+}
+
+.contact-form .formcraftbasic-css {
+	width: 100% !important;
+}
+
+.contact-form .form-element-html {
+	padding: 0 !important;
+}
+
+.formcraftbasic-css .fcb_form .field-cover > div {
+	width: 100% !important;
+}
+
+.contact-form .field-cover {
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+.contact-form .ng-binding {
+	width: 100%  !important;
+	position: static !important;
+	text-align: left !important;
+	font-size: 15px !important;
+}
+
+.contact-form  .form-element .error {
+	top: 8px !important;
+	font-size: 12px !important;
+	right: 0px !important;
+}
+
+.contact-form .final-success {
+	position: static !important;
+	height: 100% !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center;
+	gap: 8px !important;
+	font-size: 20px !important;
+	background: #dfffe2 !important;
+	border: 1px solid #b3e7b8 !important;
+	border-radius: 10px !important;
+}
+
+.contact-form .fcb_form.submitted {
+	min-height: 100%;
+}
+
+.formcraftbasic-css .fcb_form .form-element .submit-response > span.has-error {
+	font-size: 15px !important;
+}
+
+/* ----- Map ----- */
+.contact-form__map {
+	position: relative;
+	overflow: hidden;
+	grid-area: map;
+	border-radius: calc(var(--space-2x) + 2px);
+	background-color: var(--dark-background);
+}
+
+.contact-form__map iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 320px;
+}
+
+.contact-form form button {
+	justify-self: end;
+}
+
+@media screen and (max-width: 600px) {
+	.container#contacts {
+		padding-top: 32px;
+		padding-bottom: 64px;
+	}	
+
+	.contact-info {
+		grid-template-columns: 1fr;
+		margin-bottom: 32px;
+	}
+
+	.contact-form:not(.is__only-map) {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'title''form''map';
+	}
+
+	.contact-form form button[type="submit"],
+	.contact-form form input[type="submit"] {
+		width: 100% !important;
+	}
+
+	.contact-form__map {
+		height: 270px;
+	}
+}

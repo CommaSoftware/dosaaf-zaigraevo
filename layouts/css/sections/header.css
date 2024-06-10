@@ -1,0 +1,161 @@
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	padding: 0;
+	background-color: var(--color-white);
+	transition: 250ms;
+	transition-delay: 0.2s;
+}
+
+.header.is--hiding {
+	transform: translateY(-100%);
+}
+
+.header .header__container {
+	max-width: var(--width-container);
+	margin: 0 auto;
+	padding: var(--space-3x);
+}
+
+.dosaaf__logo {
+	width: 60px;
+}
+
+.nav__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+}
+
+.nav-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-4x);
+}
+
+.nav-info__item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.nav-info__data-field {
+	color: var(--color-black);
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.nav-info__data-field {
+	font-weight: 300;
+}
+
+.nav__contact-info .contact-info__item:not(:first-child) {
+	margin-top: var(--space-8x);
+}
+
+.contact-info__item {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4x);
+}
+
+.nav__menu--hidden {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: var(--header-height);
+	z-index: -1;
+	height: calc(100dvh - var(--header-height));
+	overflow-y: auto;
+	background: linear-gradient(to bottom, #FFF, #FFFE);
+	transition: 300ms ease-in-out;
+}
+
+.nav__menu--hidden:not(.is--opened) {
+	transform: translateY(-150%);
+}
+
+.nav__hidden {
+	max-width: var(--width-container);
+	margin: 0 auto;
+	padding: 0 var(--space-3x);
+	padding-top: var(--space-8x);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.nav-footer--hidden {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	gap: var(--space-4x);
+}
+
+.nav-footer__link {
+	text-decoration: none;
+	color: var(--color-black);
+	font-size: 15px;
+	font-weight: 400;
+	transition: 150ms;
+}
+
+.nav-footer__link:hover {
+	color: var(--color-red);
+}
+
+.nav__btn {
+	position: relative;
+	display: flex;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border-radius: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.nav__btn::after {
+	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'><path d='M0,4.3h24v1.9H0V4.3z M12.5,11H24V13H12.5V11z M4.8,17.8H24v1.9H4.8V17.8z'/></svg>");
+	width: 24px;
+	margin: auto;
+}
+
+.nav__btn.is--opened::after {
+	content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'><path d='M2.9,20L20.5,2.3L22,3.7L4.3,21.4L2.9,20z M3.9,2.5l17.7,17.7l-1.4,1.4L2.5,3.9L3.9,2.5z'/></svg>");
+}
+
+@media screen and (max-width: 768px) {
+	header .header__container {
+		margin: var(--space-3x) 0;
+		padding: 0 var(--space-3x);
+	}
+	
+	.nav__hidden {
+		display: grid;
+		row-gap: var(--space-8x);
+	}
+	
+	.nav-footer--hidden {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: var(--space-8x);
+	}
+
+	.dosaaf__logo {
+		width: 48px;
+	}
+	
+	.nav__btn {
+		padding: 0;
+		border-radius: 0;
+		border: 0;
+	}
+}

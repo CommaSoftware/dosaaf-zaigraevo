@@ -1,0 +1,73 @@
+:root {
+	/* Отступы */
+	--space: 4px; /* 4px */
+	--space-2x: calc(var(--space) * 2); /* 8px */
+	--space-3x: calc(var(--space) * 3); /* 12px */
+	--space-4x: calc(var(--space) * 4); /* 16px */
+	--space-5x: calc(var(--space) * 5); /* 20px */
+	--space-6x: calc(var(--space) * 6); /* 24px */
+	--space-7x: calc(var(--space) * 7); /* 28px */
+	--space-8x: calc(var(--space) * 8); /* 32px */
+	--space-9x: calc(var(--space) * 9); /* 36px */
+	--space-10x: calc(var(--space) * 10); /* 40px */
+	--space-12x: calc(var(--space) * 12); /* 48px */
+	--space-16x: calc(var(--space) * 16); /* 64px */
+	--space-32x: calc(var(--space) * 32); /* 128px */
+	--space-64x: calc(var(--space) * 64); /* 256px */
+
+
+	/* Параметры шрифтов */
+	--font-size-main: 20px;
+	--font-weight-main: 300;
+
+	--font-size-additional: 15px;
+	--font-weight-additional: 500;
+	--font-weight-light-additional: 400;
+
+	--font-size-subtitle: 40px;
+	--font-weight-subtitle: 600;
+
+	--font-size-container-title: 80px;
+	--font-weight-container-title: 800;
+	--font-family-global: "Montserrat", sans-serif;
+
+
+	/* Цвета */
+	--color-black: #101010;
+	--color-map: #4B4B4B;
+	--color-gray: #BCBCBC;
+	--color-red: #FF2626;
+	--color-white: #FFFFFF;
+	--color-white-additional: #E3E3E3;
+	--dark-background: #1E2125;
+	--light-background: #FFFFFF;
+	--border-gray: 1px solid #BCBCBC;
+
+	--text-shadow-white: 
+		-1px -1px 0 var(--color-white),
+		0    -1px 0 var(--color-white),
+		1px  -1px 0 var(--color-white),
+		1px   0   0 var(--color-white),
+		1px   1px 0 var(--color-white),
+		0     1px 0 var(--color-white),
+		-1px  1px 0 var(--color-white),
+		-1px  0   0 var(--color-white);
+
+
+	/* Отступы и размеры элементов */
+	--width-container: 1088px;
+	--header-height: 88px;
+	--main-padding: 32px 16px;
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--header-height: 76px;
+	}
+}
+
+@keyframes waving {
+	0% { transform: translateY(0%); }
+	25% { transform: translateY(0%); }
+	100% { transform: translateY(15%); }
+}

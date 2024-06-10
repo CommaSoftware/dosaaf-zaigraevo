@@ -1,0 +1,125 @@
+#about-us {
+	padding-bottom: 174px;
+}
+
+.about-us__btn {
+	display: flex;
+	justify-content: center;
+	margin-top: var(--space-8x);
+}
+
+
+/* ----- Styles for article ----- */
+
+.article-content.wp-content > *:not(:first-child) {
+	margin-top: 32px;
+}
+
+.article-content p {
+	margin-top: 1em;
+	color: var(--color-white-additional);
+	font-size: var(--font-size-main);
+	font-weight: var(--font-weight-main);
+	line-height: 180%;
+	text-align: left;
+}
+
+.article-content h3 {
+	font-size: var(--font-size-subtitle);
+	color: var(--dark-background);
+	font-weight: var(--font-weight-container-title);
+	letter-spacing: 0.05em;
+	text-shadow: var(--text-shadow-white);
+}
+
+.article-content img {
+	width: 100%;
+}
+
+.article-content .headings-group {
+	margin-top: var(--space-8x);
+	display: flex;
+	align-items: end;
+	gap: var(--space-8x);
+}
+
+.article-content .headings-group .wp-block-column {
+	display: contents;
+}
+
+.article-content .headings-group h2 {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	color: var(--dark-background);
+	font-size: var(--font-size-container-title);
+	font-weight: var(--font-weight-container-title);
+	text-transform: uppercase;
+	text-shadow: var(--text-shadow-white);
+}
+
+.article-content .headings-group h3 {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	color: var(--color-white);
+	text-shadow: none;
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-subtitle);
+	text-transform: uppercase;
+	line-height: 160%;
+}
+
+.wp-block-columns {
+	margin-top: 32px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: var(--space-16x);
+	grid-row-gap: var(--space-8x);
+}
+
+.wp-block-columns .wp-block-column {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wp-block-columns .wp-block-column:not(:first-child)::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -32px;
+	border-left: 1px solid var(--color-white-additional);
+}
+
+
+@media screen and (max-width: 768px) {
+	#about-us {
+		padding-bottom: var(--space-16x);
+	}
+
+	.article-content .headings-group {
+		margin-top: 0;
+		display: inline-flex;
+		gap: var(--space-3x);
+	}
+
+	.wp-block-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.article-content h2,
+	.article-content .headings-group h2 {
+		font-size: 30px;
+	}
+
+	.article-content h3,
+	.article-content .headings-group h3 {
+		font-size: 20px;
+	}
+
+	.article-content p {
+		font-size: 15px;
+	}
+
+}
